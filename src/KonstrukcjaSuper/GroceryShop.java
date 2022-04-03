@@ -1,0 +1,8 @@
+package KonstrukcjaSuper;
+
+public class GroceryShop {
+    public static void main(String[] args) {
+        Apple apple = new Apple(220, "Champion");
+        System.out.println(apple.getInfo());
+    }
+}

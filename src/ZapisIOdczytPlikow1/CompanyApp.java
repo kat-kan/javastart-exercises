@@ -21,10 +21,12 @@ public class CompanyApp {
             case GET_FROM_USER -> {
                 Company company = createCompany();
                 writeToFile(company);
+                break;
             }
             case GET_FROM_FILE -> {
                 Company company = readFromFile();
                 System.out.println(company.getEmployees()[0].getName());
+                break;
             }
         }
         scanner.close();

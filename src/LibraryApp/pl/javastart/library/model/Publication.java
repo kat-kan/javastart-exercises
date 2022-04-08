@@ -1,8 +1,9 @@
 package LibraryApp.pl.javastart.library.model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Publication {
+public abstract class Publication implements Serializable {
     private String title;
     private int releaseDate;
     private String publisher;
@@ -58,4 +59,6 @@ public abstract class Publication {
                 ", publisher='" + publisher + '\'' +
                 '}';
     }
+
+    public abstract String toCsv();
 }

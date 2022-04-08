@@ -3,11 +3,12 @@ package LibraryApp.pl.javastart.library.model;
 import java.util.Objects;
 
 public class Magazine extends Publication {
+    public static final String TYPE = "Magazyn";
     private int month;
     private int day;
     private String languAGE;
 
-    public Magazine(int month, int day, String languAGE, String title, String publisher, int releaseDate) {
+    public Magazine(String month, String day, String languAGE, int title, int publisher, int releaseDate) {
         super(title, releaseDate, publisher);
         this.month = month;
         this.day = day;
@@ -59,5 +60,16 @@ public class Magazine extends Publication {
                 ", day=" + day +
                 ", languAGE='" + languAGE + '\'' +
                 '}';
+    }
+
+    @Override
+    public String toCsv() {
+        return (TYPE + ";") +
+                getTitle() + ";" +
+                getPublisher() + ";" +
+                getReleaseDate() + ";" +
+                month + ";" +
+                day + ";" +
+                languAGE + "";
     }
 }

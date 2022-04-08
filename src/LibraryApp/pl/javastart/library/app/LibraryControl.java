@@ -1,8 +1,13 @@
 package LibraryApp.pl.javastart.library.app;
 
+import LibraryApp.pl.javastart.library.exception.DataExportException;
+import LibraryApp.pl.javastart.library.exception.DataImportException;
+import LibraryApp.pl.javastart.library.exception.InvalidDataException;
 import LibraryApp.pl.javastart.library.exception.NoSuchOptionException;
 import LibraryApp.pl.javastart.library.io.ConsolePrinter;
 import LibraryApp.pl.javastart.library.io.DataReader;
+import LibraryApp.pl.javastart.library.io.file.FileManager;
+import LibraryApp.pl.javastart.library.io.file.FileManagerBuilder;
 import LibraryApp.pl.javastart.library.model.Book;
 import LibraryApp.pl.javastart.library.model.Library;
 import LibraryApp.pl.javastart.library.model.Magazine;
@@ -12,10 +17,22 @@ import java.util.InputMismatchException;
 
 public class LibraryControl {
     private ConsolePrinter printer = new ConsolePrinter();
-
     private DataReader dataReader = new DataReader(printer);
+    private FileManager fileManager;
 
-    private Library library = new Library();
+    private Library library;
+
+    LibraryControl(){
+        fileManager = new FileManagerBuilder(printer, dataReader).build();
+        try {
+            library = fileManager.importData();
+            printer.printLine("Zaimportowano dane z pliku");
+        } catch (DataImportException | InvalidDataException e) {
+            printer.printLine(e.getMessage());
+            printer.printLine("Zainicjowano nową bazę");
+            library = new Library();
+        }
+    }
 
     public void controlLoop(){
         Option option;
@@ -74,7 +91,7 @@ public class LibraryControl {
     private void addBook() {
         try {
             Book book = dataReader.readAndCreateBook();
-            library.addBook(book);
+            library.addPublication(book);
         } catch (InputMismatchException e) {
             printer.printLine("Nie udało się utworzyć książki, niepoprawne dane");
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -90,7 +107,7 @@ public class LibraryControl {
     private void addMagazine() {
         try {
             Magazine magazine = dataReader.readAndCreateMagazine();
-            library.addMagazine(magazine);
+            library.addPublication(magazine);
         } catch (InputMismatchException e) {
             printer.printLine("Nie udało się utworzyć magazynu, niepoprawne dane");
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -103,9 +120,15 @@ public class LibraryControl {
         printer.printBooks(publications);
     }
 
-    private void exit(){
-        printer.printLine("Koniec programu");
+    private void exit() {
+        try {
+            fileManager.exportData(library);
+            printer.printLine("Export danych do pliku zakończony powodzeniem");
+        } catch (DataExportException e) {
+            printer.printLine(e.getMessage());
+        }
         dataReader.close();
+        printer.printLine("Koniec programu, papa!");
     }
 
     public enum Option {

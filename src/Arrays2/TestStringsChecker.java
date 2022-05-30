@@ -13,7 +13,7 @@ public class TestStringsChecker {
 
      Dodaj logikę pozwalającą użytkownikowi wprowadzić dwa napisy z klawiatury i przetestuj działanie dla kilku różnych napisów.
      */
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String firstInput = scanner.nextLine();

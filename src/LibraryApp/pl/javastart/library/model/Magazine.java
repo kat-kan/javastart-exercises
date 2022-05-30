@@ -8,7 +8,7 @@ public class Magazine extends Publication {
     private int day;
     private String languAGE;
 
-    public Magazine(String month, String day, String languAGE, int title, int publisher, int releaseDate) {
+    public Magazine(int month, int day, String languAGE, String title, String publisher, int releaseDate) {
         super(title, releaseDate, publisher);
         this.month = month;
         this.day = day;

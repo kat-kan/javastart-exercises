@@ -72,6 +72,6 @@ public class CsvFileManager implements FileManager{
         int month = Integer.valueOf(data[4]);
         int day = Integer.valueOf(data[5]);
         String language = data[6];
-        return new Magazine(title, publisher, language, year, month, day);
+        return new Magazine(month, day, language, title, publisher, year);
     }
 }

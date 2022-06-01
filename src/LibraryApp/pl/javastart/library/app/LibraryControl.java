@@ -12,17 +12,19 @@ import LibraryApp.pl.javastart.library.model.Book;
 import LibraryApp.pl.javastart.library.model.Library;
 import LibraryApp.pl.javastart.library.model.Magazine;
 import LibraryApp.pl.javastart.library.model.Publication;
+import LibraryApp.pl.javastart.library.model.comparator.AlphabeticalTitleComparator;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 
 public class LibraryControl {
-    private ConsolePrinter printer = new ConsolePrinter();
-    private DataReader dataReader = new DataReader(printer);
-    private FileManager fileManager;
+    private final ConsolePrinter printer = new ConsolePrinter();
+    private final DataReader dataReader = new DataReader(printer);
+    private final FileManager fileManager;
 
     private Library library;
 
-    LibraryControl(){
+    LibraryControl() {
         fileManager = new FileManagerBuilder(printer, dataReader).build();
         try {
             library = fileManager.importData();
@@ -34,14 +36,14 @@ public class LibraryControl {
         }
     }
 
-    public void controlLoop(){
+    public void controlLoop() {
         Option option;
 
         do {
             printOptions();
             option = getOption();
 
-            switch (option){
+            switch (option) {
                 case ADD_BOOK:
                     addBook();
                     break;
@@ -67,7 +69,7 @@ public class LibraryControl {
                     printer.printLine("Nie ma takiej opcji");
             }
         }
-        while (option!= Option.EXIT);
+        while (option != Option.EXIT);
     }
 
     private Option getOption() {
@@ -105,8 +107,8 @@ public class LibraryControl {
         }
     }
 
-    private void printBooks(){
-        Publication[] publications = library.getPublications();
+    private void printBooks() {
+        Publication[] publications = getSortedPublications();
         printer.printBooks(publications);
     }
 
@@ -122,7 +124,7 @@ public class LibraryControl {
     }
 
     private void printMagazines() {
-        Publication[] publications = library.getPublications();
+        Publication[] publications = getSortedPublications();
         printer.printBooks(publications);
     }
 
@@ -161,10 +163,16 @@ public class LibraryControl {
         printer.printLine("Koniec programu, papa!");
     }
 
+    private Publication[] getSortedPublications() {
+        Publication[] publications = library.getPublications();
+        Arrays.sort(publications, new AlphabeticalTitleComparator());
+        return publications;
+    }
+
     public enum Option {
         EXIT(0, "Wyjście z programu"),
         ADD_BOOK(1, "Dodanie książki"),
-        ADD_MAGAZINE(2,"Dodanie magazynu/gazety"),
+        ADD_MAGAZINE(2, "Dodanie magazynu/gazety"),
         PRINT_BOOKS(3, "Wyświetlenie dostępnych książek"),
         PRINT_MAGAZINES(4, "WYświetlenie dostępnych magazynów/gazet"),
         DELETE_BOOK(5, "Usuń książkę"),
@@ -173,7 +181,7 @@ public class LibraryControl {
         private final int value;
         private final String description;
 
-        Option(int value, String description){
+        Option(int value, String description) {
             this.value = value;
             this.description = description;
         }
@@ -181,7 +189,7 @@ public class LibraryControl {
         static Option createFromInt(int option) throws NoSuchOptionException {
             try {
                 return Option.values()[option];
-            } catch (ArrayIndexOutOfBoundsException e){
+            } catch (ArrayIndexOutOfBoundsException e) {
                 throw new NoSuchOptionException("Brak opcji o id " + option);
             }
         }
@@ -190,5 +198,6 @@ public class LibraryControl {
         public String toString() {
             return value + " - " + description;
         }
+
     }
 }

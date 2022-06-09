@@ -2,7 +2,7 @@ package Mapy2;
 
 import java.util.Objects;
 
-public class Device implements Comparable<Device>{
+public class Device implements Comparable<Device> {
     private String category;
     private String name;
     private double price;
@@ -57,9 +57,6 @@ public class Device implements Comparable<Device>{
 
     @Override
     public String toString() {
-        return "Device{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        return name + " " + price + " zł";
     }
 }

@@ -3,7 +3,7 @@ package LibraryApp.pl.javastart.library.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-public abstract class Publication implements Serializable, Comparable<Publication> {
+public abstract class Publication implements Serializable, Comparable<Publication>, CsvConvertible {
     private String title;
     private int releaseDate;
     private String publisher;
@@ -59,8 +59,6 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
                 ", publisher='" + publisher + '\'' +
                 '}';
     }
-
-    public abstract String toCsv();
 
     @Override
     public int compareTo(Publication p) {

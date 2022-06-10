@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class LibraryUser extends User{
+public class LibraryUser extends User {
 
     private List<Publication> publicationHistory = new ArrayList<>();
     private List<Publication> borrowedPublications = new ArrayList<>();
+
+    public LibraryUser(String firstName, String lastName, String pesel) {
+        super(firstName, lastName, pesel);
+    }
 
     public List<Publication> getPublicationHistory() {
         return publicationHistory;
@@ -17,21 +21,17 @@ public class LibraryUser extends User{
         return borrowedPublications;
     }
 
-    public LibraryUser(String firstName, String lastName, String pesel) {
-        super(firstName, lastName, pesel);
-    }
-
-    private void addPublicationToHistory(Publication pub){
+    private void addPublicationToHistory(Publication pub) {
         publicationHistory.add(pub);
     }
 
-    public void borrowPublication(Publication pub){
+    public void borrowPublication(Publication pub) {
         borrowedPublications.add(pub);
     }
 
-    public boolean returnPublication(Publication pub){
+    public boolean returnPublication(Publication pub) {
         boolean result = false;
-        if(borrowedPublications.remove(pub)){
+        if (borrowedPublications.remove(pub)) {
             result = true;
             addPublicationToHistory(pub);
         }

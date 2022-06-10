@@ -3,53 +3,63 @@ package LibraryApp.pl.javastart.library.io.file;
 import LibraryApp.pl.javastart.library.exception.DataExportException;
 import LibraryApp.pl.javastart.library.exception.DataImportException;
 import LibraryApp.pl.javastart.library.exception.InvalidDataException;
-import LibraryApp.pl.javastart.library.model.Book;
-import LibraryApp.pl.javastart.library.model.Library;
-import LibraryApp.pl.javastart.library.model.Magazine;
-import LibraryApp.pl.javastart.library.model.Publication;
+import LibraryApp.pl.javastart.library.model.*;
 
 import java.io.*;
+import java.util.Collection;
 import java.util.Scanner;
 
-public class CsvFileManager implements FileManager{
+public class CsvFileManager implements FileManager {
 
-    private static final String FILE_NAME = "Library.csv";
+    private static final String PUBLICATIONS_FILE_NAME = "Library.csv";
+    private static final String USERS_FILE_NAME = "Library_users.csv";
 
-   @Override
+    @Override
+    public Library importData() {
+        Library library = new Library();
+        importPublications(library);
+        importUsers(library);
+        return library;
+    }
+
+    @Override
     public void exportData(Library library) {
-        Publication[] publications = library.getPublications();
-        try (FileWriter fileWriter = new FileWriter(FILE_NAME);
+        exportPublications(library);
+        exportUsers(library);
+    }
+
+    private void exportPublications(Library library) {
+        Collection<Publication> publications = library.getPublications().values();
+        try (FileWriter fileWriter = new FileWriter(PUBLICATIONS_FILE_NAME);
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
             for (Publication publication : publications) {
                 bufferedWriter.write(publication.toCsv());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {
-            throw new DataExportException("Błąd zapisu danych do pliku " + FILE_NAME);
+            throw new DataExportException("Błąd zapisu danych do pliku " + PUBLICATIONS_FILE_NAME);
         }
     }
 
-    @Override
-    public Library importData() {
-        Library library = new Library();
-        try (Scanner fileReader = new Scanner(new File(FILE_NAME))) {
-            while (fileReader.hasNextLine()) {
-                String line = fileReader.nextLine();
-                Publication publication = createObjectFromString(line);
-                library.addPublication(publication);
+    private void exportUsers(Library library) {
+        Collection<LibraryUser> users = library.getUsers().values();
+        try (FileWriter fileWriter = new FileWriter(USERS_FILE_NAME);
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+            for (LibraryUser libUser : users) {
+                bufferedWriter.write(libUser.toCsv());
+                bufferedWriter.newLine();
             }
-        } catch (FileNotFoundException e) {
-            throw new DataImportException("Brak pliku " + FILE_NAME);
+        } catch (IOException e) {
+            throw new DataExportException("Błąd zapisu danych do pliku " + USERS_FILE_NAME);
         }
-        return library;
     }
 
     private Publication createObjectFromString(String csvText) {
         String[] split = csvText.split(";");
         String type = split[0];
-        if(Book.TYPE.equals(type)) {
+        if (Book.TYPE.equals(type)) {
             return createBook(split);
-        } else if(Magazine.TYPE.equals(type)) {
+        } else if (Magazine.TYPE.equals(type)) {
             return createMagazine(split);
         }
         throw new InvalidDataException("Nieznany typ publikacji: " + type);
@@ -74,4 +84,37 @@ public class CsvFileManager implements FileManager{
         String language = data[6];
         return new Magazine(month, day, language, title, publisher, year);
     }
+
+    private void importPublications(Library library) {
+        try (Scanner fileReader = new Scanner(new File(PUBLICATIONS_FILE_NAME))) {
+            while (fileReader.hasNextLine()) {
+                String line = fileReader.nextLine();
+                Publication publication = createObjectFromString(line);
+                library.addPublication(publication);
+            }
+        } catch (FileNotFoundException e) {
+            throw new DataImportException("Brak pliku " + PUBLICATIONS_FILE_NAME);
+        }
+    }
+
+    private void importUsers(Library library) {
+        try (Scanner fileReader = new Scanner(new File(USERS_FILE_NAME))) {
+            while (fileReader.hasNextLine()) {
+                String line = fileReader.nextLine();
+                LibraryUser libUser = createUserFromString(line);
+                library.addUser(libUser);
+            }
+        } catch (FileNotFoundException e) {
+            throw new DataImportException("Brak pliku " + USERS_FILE_NAME);
+        }
+    }
+
+    private LibraryUser createUserFromString(String csvText) {
+        String[] split = csvText.split(";");
+        String firstName = split[0];
+        String lastName = split[1];
+        String pesel = split[2];
+        return new LibraryUser(firstName, lastName, pesel);
+    }
+
 }

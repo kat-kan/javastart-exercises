@@ -6,10 +6,7 @@ import LibraryApp.pl.javastart.library.io.DataReader;
 import LibraryApp.pl.javastart.library.io.file.FileManager;
 import LibraryApp.pl.javastart.library.io.file.FileManagerBuilder;
 import LibraryApp.pl.javastart.library.model.*;
-import LibraryApp.pl.javastart.library.model.comparator.AlphabeticalTitleComparator;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.InputMismatchException;
 
 public class LibraryControl {
@@ -109,7 +106,9 @@ public class LibraryControl {
     }
 
     private void printBooks() {
-        printer.printBooks(library.getSortedPublications(new AlphabeticalTitleComparator()));
+        printer.printBooks(library.getSortedPublications(
+                (p1, p2) -> p1.getTitle().compareToIgnoreCase(p2.getTitle())
+        ));
     }
 
     private void addUser() {
@@ -133,16 +132,13 @@ public class LibraryControl {
     }
 
     private void printMagazines() {
-        printer.printMagazines(library.getSortedPublications(new AlphabeticalTitleComparator()));
+        printer.printMagazines(library.getSortedPublications(
+                (p1, p2) -> p1.getTitle().compareToIgnoreCase(p2.getTitle())
+        ));
     }
 
     private void printUsers() {
-        printer.printUsers(library.getSortedUsers(new Comparator<LibraryUser>() {
-            @Override
-            public int compare(LibraryUser o1, LibraryUser o2) {
-                return o1.getLastName().compareToIgnoreCase(o2.getLastName());
-            }
-        }));
+        printer.printUsers(library.getSortedUsers((o1, o2) -> o1.getLastName().compareToIgnoreCase(o2.getLastName())));
     }
 
     private void deleteMagazine() {

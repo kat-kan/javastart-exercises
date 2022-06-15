@@ -4,32 +4,44 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class RandomGenerator {
     public static void main(String[] args) {
-        List<Integer> numbersList = new ArrayList<>();
-        //create 10 random numbers
         Random random = new Random();
-        for (int i = 0; i < 10; i++) {
-            numbersList.add(random.nextInt());
+        Supplier<Integer> supplier = () -> random.nextInt();
+        List<Integer> numbersList = supplyList(10, supplier);
+        System.out.println("Wygenerowana lista");
+        consumeList(numbersList, (number) -> System.out.print((String.valueOf(number) + " ")));
+        filterList(numbersList, (number) -> number % 2 == 0);
+        System.out.println("\n" + "Po przefiltrowaniu");
+        consumeList(numbersList, (number) -> System.out.print(String.valueOf(number) + " "));
+
+    }
+
+    private static <T> List<T> supplyList(int listSize, Supplier<T> supplier) {
+        List<T> numbersList = new ArrayList<>();
+        for (int i = 0; i < listSize; i++) {
+            numbersList.add(supplier.get());
         }
-        //print all
-        for (int number:
-             numbersList) {
-            System.out.println(number + " ");
+        return numbersList;
+    }
+
+    private static <T> void consumeList(List<T> list, Consumer<T> consumer) {
+        for (T t : list) {
+            consumer.accept(t);
         }
-        //remove all that can be divided by 2
-        Iterator<Integer> numbersIterator = numbersList.iterator();
-        while (numbersIterator.hasNext()){
-            if (numbersIterator.next()%2 == 0){
-                numbersIterator.remove();
+    }
+
+    private static <T> void filterList(List<T> list, Predicate<T> predicate) {
+        Iterator<T> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            T t = iterator.next();
+            if (predicate.test(t)) {
+                iterator.remove();
             }
         }
-        System.out.println("po usunięciu");
-        for (int number:
-                numbersList) {
-            System.out.println(number + " ");
-        }
-
     }
 }

@@ -1,4 +1,4 @@
-package ReferencesToMethods;
+package MethodsReferences;
 
 import java.util.Arrays;
 import java.util.List;

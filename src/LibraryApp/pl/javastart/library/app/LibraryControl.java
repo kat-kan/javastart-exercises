@@ -133,8 +133,7 @@ public class LibraryControl {
 
     private void printMagazines() {
         printer.printMagazines(library.getSortedPublications(
-                (Comparator.comparing(Publication::getTitle, String.CASE_INSENSITIVE_ORDER)
-        ));
+                (Comparator.comparing(Publication::getTitle, String.CASE_INSENSITIVE_ORDER))));
     }
 
     private void printUsers() {

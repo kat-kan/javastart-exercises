@@ -2,6 +2,8 @@ package MethodsReferences2;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public class Company {
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class Company {
 
         System.out.println("Liczba pracowników zatrudnionych na pełen etat: " + fullTimeEmployeesNumber);
         System.out.println("Oto oni:");
-        employees.stream().filter(employee -> isFullTimeEmployee(employee))
+        employees.stream().filter(Company::isFullTimeEmployee)
                 .forEach(System.out::println);
 
         employeeWithLongestName(employees)
@@ -22,20 +24,24 @@ public class Company {
 
     private static Optional<String> employeeWithLongestName(List<Employee> employees) {
         return employees.stream()
-                .map(employee -> employee.getFirstName() + " " + employee.getLastName())
-                .max((e1, e2) -> Integer.compare(e1.length(), e2.length()));
+                .map(Company::getEmployeeName)
+                .max(Company::compareEmployeeNames);
+    }
+
+    private static String getEmployeeName(Employee employee) {
+        return employee.getFirstName() + " " + employee.getLastName();
     }
 
     private static long countEmployeesByEmployment(List<Employee> employees, Employment employment) {
         return employees.stream()
-                .filter(e -> e.getEmployment() == employment)
+                .filter(employment::verifyEmployment)
                 .count();
     }
 
     private static void addBonusToFullTimeEmployees(List<Employee> employees) {
         employees.stream()
                 .filter(Company::isFullTimeEmployee)
-                .forEach(employee -> employee.setSalary(employee.getSalary() * 1.1));
+                .forEach(Company::addBonus);
     }
 
     private static List<Employee> createEmployees() {
@@ -56,5 +62,13 @@ public class Company {
 
     private static boolean isFullTimeEmployee(Employee employee) {
         return employee.getEmployment() == Employment.FULL_TIME;
+    }
+
+    private static int compareEmployeeNames(String e1, String e2) {
+        return Integer.compare(e1.length(), e2.length());
+    }
+
+    private static void addBonus(Employee employee) {
+        employee.setSalary(employee.getSalary() * 1.1);
     }
 }

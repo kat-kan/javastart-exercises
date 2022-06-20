@@ -15,7 +15,7 @@ public class Company {
 
         System.out.println("Liczba pracowników zatrudnionych na pełen etat: " + fullTimeEmployeesNumber);
         System.out.println("Oto oni:");
-        employees.stream().filter(Company::isFullTimeEmployee)
+        employees.stream().filter(Employment.FULL_TIME::verifyEmployment)
                 .forEach(System.out::println);
 
         employeeWithLongestName(employees)
@@ -40,7 +40,7 @@ public class Company {
 
     private static void addBonusToFullTimeEmployees(List<Employee> employees) {
         employees.stream()
-                .filter(Company::isFullTimeEmployee)
+                .filter(Employment.FULL_TIME::verifyEmployment)
                 .forEach(Company::addBonus);
     }
 
@@ -58,10 +58,6 @@ public class Company {
 
     private static void printLongestName(String emp) {
         System.out.println("Pracownik o najdłuższym imieniu i nazwisku to " + emp);
-    }
-
-    private static boolean isFullTimeEmployee(Employee employee) {
-        return employee.getEmployment() == Employment.FULL_TIME;
     }
 
     private static int compareEmployeeNames(String e1, String e2) {

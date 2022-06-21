@@ -2,168 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4ce6cb2-32a6-4b62-b239-34e60ac38f77" name="Default Changelist" comment="Inner classes - exercises">
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/namespl.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjaKompozycja/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjaKompozycja/Bank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjaKompozycja/BankAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjaKompozycja/Credit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjaKompozycja/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjeKompozycje2/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjeKompozycje2/Allegro.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjeKompozycje2/Auction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/AgregacjeKompozycje2/Seller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Algorytmika1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Algorytmika2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/DebugExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie1/ExhaustPart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie1/Part.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie1/TestApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie1/Tire.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie2/Bootcamp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie2/Course.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie2/OnlineCourse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie2/StationaryCourse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Dziedziczenie2/TestApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja/DiscountApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja/DiscountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja/Greeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja2/CinemaSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja2/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja2/Movie.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja2/Ticket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enkapsulacja2/TicketService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enum1/Pizza.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enum1/Pizzeria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enum2/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enum2/Shop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Enum2/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/EvenAdder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions1/Exceptions1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions1/UnknownOperatorException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/AgeViolationException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/Competition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/CompetitionApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/CompetitionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/DuplicateException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/MaxCompetitorsException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Exceptions2/Participant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/Circle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/Rectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/Shape$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/Shape.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/ShapeCalculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/ShapeType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/Triangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/io/ConsolePrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy1/io/DataReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy2/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy2/FulltimeEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy2/PartTimeEmployee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Interfejsy2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KlasyObiekty/Company.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KlasyObiekty/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KlasyObiekty2/Garden.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KlasyObiekty2/Plant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KonstrukcjaSuper/Apple.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KonstrukcjaSuper/Fruit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/KonstrukcjaSuper/GroceryShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/app/LibraryApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/app/LibraryControl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/app/Option.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/exception/NoSuchOptionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/io/ConsolePrinter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/io/DataReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/model/Library.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/model/Magazine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/LibraryApp/pl/javastart/library/model/Publication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Metody/Calculate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Metody/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Metody2/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Metody2/Metric.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Metody2/Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/MetodyKonstruktory3/Offer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/MetodyKonstruktory3/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/MetodyKonstruktory3/Shop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/MetodyKonstruktory4/House.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/MetodyKonstruktory4/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object1/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object1/DataStore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object1/NotebookShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object2/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object2/BankAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object2/BankTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Object2/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/OperacjeNaZmiennych.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/OperacjeNaZmiennych2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Petle1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Petle2/Hospital.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Petle2/HospitalApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Petle2/Patient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Petle3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm1/Doctor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm1/Hospital.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm1/HospitalApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm1/Nurse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm1/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm2/Attacker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm2/Battle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm2/Character.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm2/Defender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Polimorfizm2/Team.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/PrzeciazanieMetod/CalcTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/PrzeciazanieMetod/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/PrzeciazanieMetod2/Dice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/PrzeciazanieMetod2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu/controller/PointController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu/data/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu2/pl/javastart/application/PhoneTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu2/pl/javastart/logic/Charger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/SpecyfikatoryDostepu2/pl/javastart/model/Telephone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne1/Student.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne1/University.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne2/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne2/Unit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne3/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Statyczne3/CarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/String1/StringCwiczenie1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/String2/StringCwiczenie2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/StrukturySterujace2/Number.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/StrukturySterujace2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TabliceJednowymiarowe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TabliceJednowymiarowe2/Elevator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TabliceJednowymiarowe2/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TabliceJednowymiarowe2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TypyDanych.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/TypyDanych2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Wielowymiarowe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/WprowadzanieDanych/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/WprowadzanieDanych/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/WprowadzanieDanych2/Generator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/WprowadzanieDanych2/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Zmienne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javastart ćwiczenia/Zmienne2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/properties.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorytmika1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Algorytmika2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DebugExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EvenAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Petle4/EvenAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OperacjeNaZmiennych.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperacjeNaZmiennych1/OperacjeNaZmiennych.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OperacjeNaZmiennych2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OperacjeNaZmiennych2/OperacjeNaZmiennych2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Petle1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Petle1/Petle1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Petle3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Petle3/Petle3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TabliceJednowymiarowe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TypyDanych.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TypyDanych2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TypyDanych2/TypyDanych2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wielowymiarowe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Zmienne.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Zmienne2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -627,7 +470,7 @@
       <workItem from="1655843033171" duration="45000" />
       <workItem from="1655843090847" duration="55000" />
       <workItem from="1655843183772" duration="65000" />
-      <workItem from="1655843275837" duration="732000" />
+      <workItem from="1655843275837" duration="1287000" />
     </task>
     <task id="LOCAL-00001" summary="First commit of code created during Q1 2022">
       <created>1649011667314</created>

@@ -45,4 +45,10 @@ public class MatchResult {
     public void setNumberOfGuestGoals(int numberOfGuestGoals) {
         this.numberOfGuestGoals = numberOfGuestGoals;
     }
+
+    @Override
+    public String toString() {
+        return hostTeamName + " - " + guestTeamName +
+                "(" + numberOfHostsGoals + ":" + numberOfGuestGoals + ")";
+    }
 }

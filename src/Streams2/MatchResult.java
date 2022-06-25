@@ -51,4 +51,16 @@ public class MatchResult {
         return hostTeamName + " - " + guestTeamName +
                 "(" + numberOfHostsGoals + ":" + numberOfGuestGoals + ")";
     }
+
+    public boolean containsTeam(String team){
+        return hostTeamName.equals(team) || guestTeamName.equals(team);
+    }
+
+    public String[] getTeamNames(){
+        return new String[] {hostTeamName,guestTeamName};
+    }
+
+    public int getMatchGoals(){
+        return getNumberOfGuestGoals() + getNumberOfHostsGoals();
+    }
 }

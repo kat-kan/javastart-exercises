@@ -1,17 +1,18 @@
 package LibraryApp.pl.javastart.library.model;
 
 import java.io.Serializable;
+import java.time.Year;
 import java.util.Objects;
 
 public abstract class Publication implements Serializable, Comparable<Publication>, CsvConvertible {
     private String title;
-    private int releaseDate;
     private String publisher;
+    private Year year;
 
-    Publication(String title, int releaseDate, String publisher) {
+    public Publication(String title, String publisher, Year year) {
         this.title = title;
-        this.releaseDate = releaseDate;
         this.publisher = publisher;
+        this.year = year;
     }
 
     public String getTitle() {
@@ -22,12 +23,12 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
         this.title = title;
     }
 
-    public int getReleaseDate() {
-        return releaseDate;
+    public Year getYear() {
+        return year;
     }
 
-    public void setReleaseDate(int releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setYear(Year year) {
+        this.year = year;
     }
 
     public String getPublisher() {
@@ -43,20 +44,20 @@ public abstract class Publication implements Serializable, Comparable<Publicatio
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Publication that = (Publication) o;
-        return releaseDate == that.releaseDate && Objects.equals(title, that.title) && Objects.equals(publisher, that.publisher);
+        return Objects.equals(title, that.title) && Objects.equals(publisher, that.publisher) && Objects.equals(year, that.year);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, releaseDate, publisher);
+        return Objects.hash(title, publisher, year);
     }
 
     @Override
     public String toString() {
         return "Publication{" +
                 "title='" + title + '\'' +
-                ", releaseDate=" + releaseDate +
                 ", publisher='" + publisher + '\'' +
+                ", year=" + year +
                 '}';
     }
 

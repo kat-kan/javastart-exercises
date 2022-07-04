@@ -1,9 +1,6 @@
 package Optional;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ContactManager {
     private Set<Contact> contacts = new HashSet<>();
@@ -12,14 +9,14 @@ public class ContactManager {
         contacts.add(contact);
     }
 
-    Contact findByEmail(String email) {
+    Optional<Contact> findByEmail(String email) {
         if (email == null)
             throw new NullPointerException("email cannot be null");
         for (Contact contact : contacts) {
             if (email.equals(contact.getEmail()))
-                return contact;
+                return Optional.of(contact);
         }
-        return null;
+        return Optional.empty();
     }
 
     List<Contact> findByLastName(String textFragment) {

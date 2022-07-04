@@ -1,5 +1,6 @@
 package Optional;
 
+import java.util.Optional;
 import java.util.Scanner;
 
 public class ContactApp {
@@ -8,8 +9,8 @@ public class ContactApp {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj adres email do wyszukania kontaktu:");
         String email = scanner.nextLine();
-        Contact contactByEmail = contactManager.findByEmail(email);
+        Optional<Contact> contactByEmail = contactManager.findByEmail(email);
         System.out.println("Kontakt o wskazanym adresie email:");
-        System.out.println(contactByEmail.getShortInfo());
+        //System.out.println(contactByEmail.getShortInfo());
     }
 }

@@ -1,5 +1,6 @@
 package LibraryApp.pl.javastart.library.model;
 
+import java.time.Year;
 import java.util.Objects;
 
 public class Book extends Publication{
@@ -12,7 +13,7 @@ public class Book extends Publication{
 
     public Book(String title, String author, int releaseDate,
          int pages, String publisher){
-        super(title, releaseDate, publisher);
+        super(title, publisher, Year.of(releaseDate));
         this.author = author;
         this.pages = pages;
     }
@@ -75,7 +76,7 @@ public class Book extends Publication{
         return (TYPE + ";") +
                 getTitle() + ";" +
                 getPublisher() + ";" +
-                getReleaseDate() + ";" +
+                getYear() + ";" +
                 author + ";" +
                 pages + ";" +
                 isbn + "";

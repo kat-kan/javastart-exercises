@@ -37,35 +37,16 @@ public class LibraryControl {
             option = getOption();
 
             switch (option) {
-                case ADD_BOOK:
-                    addBook();
-                    break;
-                case ADD_MAGAZINE:
-                    addMagazine();
-                    break;
-                case PRINT_BOOKS:
-                    printBooks();
-                    break;
-                case PRINT_MAGAZINES:
-                    printMagazines();
-                    break;
-                case DELETE_BOOK:
-                    deleteBook();
-                    break;
-                case DELETE_MAGAZINE:
-                    deleteMagazine();
-                    break;
-                case ADD_USER:
-                    addUser();
-                    break;
-                case PRINT_USERS:
-                    printUsers();
-                    break;
-                case EXIT:
-                    exit();
-                    break;
-                default:
-                    printer.printLine("Nie ma takiej opcji");
+                case ADD_BOOK -> addBook();
+                case ADD_MAGAZINE -> addMagazine();
+                case PRINT_BOOKS -> printBooks();
+                case PRINT_MAGAZINES -> printMagazines();
+                case DELETE_BOOK -> deleteBook();
+                case DELETE_MAGAZINE -> deleteMagazine();
+                case ADD_USER -> addUser();
+                case PRINT_USERS -> printUsers();
+                case EXIT -> exit();
+                default -> printer.printLine("Nie ma takiej opcji");
             }
         }
         while (option != Option.EXIT);

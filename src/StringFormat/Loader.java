@@ -7,7 +7,14 @@ public class Loader {
             try {
                 Thread.sleep(200);
                 loadingPercent+= 0.5;
-                System.out.print("Wczytywanie" + loadingPercent + "\r");
+                String halfPercentSign = loadingPercent % 1.0 == 0 ? "/": "\\";
+                /*String tenPercentSign = " ";
+                StringBuilder builder = new StringBuilder();
+                if (loadingPercent%10.0==0){
+                    builder.append(tenPercentSign).append("#");
+                }
+                tenPercentSign = builder.toString();*/
+                System.out.printf("Wczytywanie: %.2f %% %s \r", loadingPercent, halfPercentSign);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

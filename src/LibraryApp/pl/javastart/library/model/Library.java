@@ -15,6 +15,10 @@ public class Library implements Serializable {
         return publications;
     }
 
+    public Optional<Publication> getPublicationByTitle(String title){
+        return Optional.ofNullable(publications.get(title));
+    }
+
     public Collection<Publication> getSortedPublications(Comparator<Publication> comparator){
         ArrayList<Publication> list = new ArrayList<>(this.publications.values());
         list.sort(comparator);

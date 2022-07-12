@@ -45,6 +45,7 @@ public class LibraryControl {
                 case DELETE_MAGAZINE -> deleteMagazine();
                 case ADD_USER -> addUser();
                 case PRINT_USERS -> printUsers();
+                case FIND_BOOK -> findBook();
                 case EXIT -> exit();
                 default -> printer.printLine("Nie ma takiej opcji");
             }
@@ -121,6 +122,15 @@ public class LibraryControl {
         printer.printUsers(library.getSortedUsers(Comparator.comparing(User::getLastName,String.CASE_INSENSITIVE_ORDER)));
     }
 
+    private void findBook(){
+        printer.printLine("Podaj tytuł publikacji : ");
+        String title = dataReader.getString();
+        String notFoundMessage = "Nie znaleziono publikacji o takim tytule";
+        library.getPublicationByTitle(title)
+                .map(Publication::toString)
+                .ifPresentOrElse(System.out::println, () -> System.out.println(notFoundMessage));
+    }
+
     private void deleteMagazine() {
         try {
             Magazine magazine = dataReader.readAndCreateMagazine();
@@ -165,7 +175,8 @@ public class LibraryControl {
         DELETE_BOOK(5, "Usuń książkę"),
         DELETE_MAGAZINE(6, "Usuń magazyn"),
         ADD_USER(7, "Dodaj czytelnika"),
-        PRINT_USERS(8, "Wyświetl czytelników");
+        PRINT_USERS(8, "Wyświetl czytelników"),
+        FIND_BOOK(9, "Znajdź książkę po tytule");
 
         private final int value;
         private final String description;
